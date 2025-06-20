@@ -34,6 +34,6 @@ jobs:
       - name: Generate Kubeconfig
         run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project kubernetes-459916
 
-      - name: Test
-        run: kubectl get nodes 
+      - name: Install app 
+        run: helm upgrade --install flask ./flask 
 

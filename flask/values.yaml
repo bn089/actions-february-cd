@@ -1,0 +1,11 @@
+deployment: 
+  image: 
+    repository: bn089/flask-myapp
+    tag: "1.0.0"
+  port: 5000
+
+
+service:
+  type: LoadBalancer
+  port: 80
+  
